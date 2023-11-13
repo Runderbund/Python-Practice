@@ -78,3 +78,17 @@ def sum_matching_integers_2(array, int):
         if char == int:
             total += char
     return total
+
+def reverse_array(array):
+    new_array = []
+    i = len(array) - 1
+    while i >=0:
+        new_array.append(array[i])
+        i -= 1
+    return new_array
+
+def reverse_array_2(array):
+    new_array = []
+    for char in array:
+        new_array.insert(0, char)
+    return new_array
