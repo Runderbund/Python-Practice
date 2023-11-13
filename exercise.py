@@ -38,3 +38,27 @@ def count_char(string, char):
         if c == char:
             count += 1
     return count
+
+def find_nonmatching_chars(string1, string2):
+    nonmatching = []
+    for char in string1:
+        if char not in string2:
+            nonmatching.append(char)
+    for char in string2:
+        if char not in string1:
+            nonmatching.append(char)
+    return nonmatching
+
+def determine_anagram(string1, string2):
+    return sorted(string1) == sorted(string2)
+
+def count_vowels_consonants(string):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowel_count = 0
+    consonant_count = 0
+    for char in string:
+        if char.lower() in vowels:
+            vowel_count += 1
+        elif char.isalpha():
+            consonant_count += 1
+    return vowel_count, consonant_count
