@@ -62,3 +62,19 @@ def count_vowels_consonants(string):
         elif char.isalpha():
             consonant_count += 1
     return vowel_count, consonant_count
+
+def sum_matching_integers(array):
+    # Totals all integers in an array
+    total = 0
+    for num in array:
+        if isinstance(num, int):
+            total += num
+    return total
+
+def sum_matching_integers_2(array, int):
+    # Totals all integers that match a given value in an array
+    total = 0
+    for char in array:
+        if char == int:
+            total += char
+    return total
